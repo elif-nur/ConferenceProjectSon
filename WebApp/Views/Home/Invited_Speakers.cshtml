@@ -1,0 +1,18 @@
+﻿@model List<Entities.Concrete.InvitedSpeaker>
+@{
+    ViewBag.Title = "Invited_Speakers";
+}
+
+<br />
+<h4 style="color:firebrick">Invited Speakers</h4>
+<hr />
+<p>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>@item.FullName</li>
+        }
+
+    </ul>
+</p>
+

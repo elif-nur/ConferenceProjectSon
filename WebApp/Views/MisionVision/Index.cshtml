@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Entities.Concrete.MisionVision>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/ManagerPanel/_Layout.cshtml";
+}
+
+<br />
+<p>
+    <a href="/MisionVision/Create" class="btn btn-success">Create</a>
+</p>
+<table class="table" id="tablo">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>DESCRIPTION</th>
+            <th>UPDATE</th>
+            <th>DELETE</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Title</td>
+                <td>@item.Description</td>
+                <td><a href="/MisionVision/Bring/@item.Id" class="btn btn-primary">Update</a></td>
+                <td><a href="/MisionVision/Delete/@item.Id" class="btn btn-danger">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+
+</table>

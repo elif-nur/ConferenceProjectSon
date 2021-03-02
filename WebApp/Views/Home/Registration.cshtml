@@ -1,0 +1,148 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="~/Images/icons/favicon.ico" />
+    
+    <!--===============================================================================================-->
+
+    <link href="~/startbootstrap-shop-item-gh-pages/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  
+    <!--===============================================================================================-->
+
+    <link href="~/startbootstrap-shop-item-gh-pages/vendor/bootstrap/css/animate.css" rel="stylesheet" />
+    <!--===============================================================================================-->
+
+    <link href="~/startbootstrap-shop-item-gh-pages/vendor/bootstrap/css/hamburgers.min.css" rel="stylesheet" />
+    <!--===============================================================================================-->
+    <link href="~/startbootstrap-shop-item-gh-pages/vendor/bootstrap/css/animsition.min.css" rel="stylesheet" />
+    <!--===============================================================================================-->
+    <link href="~/startbootstrap-shop-item-gh-pages/vendor/bootstrap/css/select2.min.css" rel="stylesheet" />
+    <!--===============================================================================================-->
+    <link href="~/startbootstrap-shop-item-gh-pages/vendor/bootstrap/css/daterangepicker.css" rel="stylesheet" />
+    <!--===============================================================================================-->
+    <link href="~/startbootstrap-shop-item-gh-pages/vendor/bootstrap/css/main.css" rel="stylesheet" />
+    <link href="~/startbootstrap-shop-item-gh-pages/vendor/bootstrap/css/util.css" rel="stylesheet" />
+    <!--===============================================================================================---->
+</head>
+<body>
+
+
+    <div class="container-contact100">
+
+        <div class="wrap-contact100">
+            <form class="contact100-form validate-form">
+                <span class="contact100-form-title">
+                    Registration Form
+                </span>
+
+                <div class="wrap-input100 validate-input" data-validate="Please enter your first name">
+                    <input class="input100" type="text" name="firstname" placeholder="First Name">
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="wrap-input100 validate-input" data-validate="Please enter your last name">
+                    <input class="input100" type="text" name="lastname" placeholder="Last Name">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Please enter your email: e@a.x">
+                    <input class="input100" type="text" name="email" placeholder="E-mail">
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="wrap-input100 validate-input" data-validate="Please enter your affiliation">
+                    <input class="input100" type="text" name="affiliation" placeholder="Affiliation">
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="wrap-input100 validate-input" data-validate="Please enter your country">
+                    <input class="input100" type="text" name="country" placeholder="Country">
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="wrap-input100 ">
+                    <input class="input100" type="text" name="title" placeholder="Title">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <input type="radio" id="katilimcidi" onclick="ShowOrHide(1)" name="vehicle">
+                <label for="vehicle1"> Katılımcı Dinleyici</label>
+                <input type="radio" id="vehicle2" name="vehicle" onclick="ShowOrHide(2)">
+                <label for="vehicle2"> Konuşmacı</label>
+                <input type="radio" id="vehicle3" name="vehicle" onclick="ShowOrHide(2)">
+                <label for="vehicle2"> Katılımcı Konuşmacı</label>
+                <br />
+                <div class="wrap-input100" id="abstract">
+                    <textarea class="input100" name="abstract" placeholder="Abstract"></textarea>
+                    <span class="focus-input100"></span>
+                </div>
+
+
+                <div class="container-contact100-form-btn">
+                    <button class="contact100-form-btn">
+                        <span>
+                            <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+                            Registration
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <div id="dropDownSelect1"></div>
+
+    <!--===============================================================================================-->
+
+    <script src="~/startbootstrap-shop-item-gh-pages/vendor/bootstrap/js/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/startbootstrap-shop-item-gh-pages/vendor/bootstrap/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/startbootstrap-shop-item-gh-pages/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/startbootstrap-shop-item-gh-pages/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/startbootstrap-shop-item-gh-pages/vendor/bootstrap/js/select2.min.js"></script>>
+    <!--===============================================================================================-->
+    <script src="~/startbootstrap-shop-item-gh-pages/vendor/bootstrap/js/moment.min.js"></script>
+    <script src="~/startbootstrap-shop-item-gh-pages/vendor/bootstrap/js/daterangepicker.js"></script>
+    <!--==============================================================================================-->
+    <script src="~/startbootstrap-shop-item-gh-pages/vendor/bootstrap/js/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/startbootstrap-shop-item-gh-pages/vendor/bootstrap/js/main.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+
+    <script>
+       
+        function ShowOrHide(deger) {
+            //kanka 1 fonk olsun 
+            if (deger === 1) {
+                var hide = document.getElementById('abstract');
+                hide.style.visibility = "hidden";
+            }
+            if (deger === 2) {
+                var show = document.getElementById('abstract');
+                show.style.visibility = "visible";
+            }
+        }
+    </script>
+
+</body>
+</html>

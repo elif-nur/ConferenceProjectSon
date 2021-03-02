@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Commite";
+}
+
+<h2 style="color:firebrick">Commite</h2>
+
+<h4 style="color:firebrick">Scientific Committee</h4>
+<hr />
+<p>
+    <ul>
+        @foreach (var item in ViewBag.speaker)
+        {
+            <li>@item.FullName</li>
+        }
+
+    </ul>
+
+    <h4 style="color:firebrick">Organising Committee</h4>
+    <hr />
+<p>
+    <ul>
+       @foreach (var item in ViewBag.organising)
+       {
+           <li>@item.FullName</li>
+       }
+
+    </ul>
+</p>

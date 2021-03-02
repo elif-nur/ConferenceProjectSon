@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Entities.Concrete.MisionVision>
+@{ ViewBag.Title = "Mision_Vision"; }
+<br />
+<h4 style="color:firebrick">Mision / Vision</h4>
+<hr />
+
+@foreach (var item in Model)
+{
+    <h4>@item.Title</h4>
+    <p style="text-align:justify">@item.Description</p>
+}

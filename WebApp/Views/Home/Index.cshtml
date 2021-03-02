@@ -1,0 +1,12 @@
+﻿
+@{ ViewBag.Title = "Index"; }
+
+<br />
+
+@foreach (var item in Model)
+{
+<h2 style="color:firebrick">@item.Title</h2>
+<hr />
+<p style="text-align:justify">@item.Description</p>
+}
+

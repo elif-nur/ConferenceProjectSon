@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Entities.Concrete.User>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/ManagerPanel/_Layout.cshtml";
+}
+
+<br />
+<p>
+    <a href="/Userrs/Create" class="btn btn-success">Create</a>
+</p>
+<table class="table" id="tablo">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>USERNAME</th>
+            <th>PASSWORD</th>
+            <th>ROL</th>
+            <th>UPDATE</th>
+            <th>DELETE</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+<tr>
+    <td>@item.Id</td>
+    <td>@item.UserName</td>
+    <td>@item.Password</td>
+    <td>@item.Role</td>
+    <td><a href="/Userrs/Bring/@item.Id" class="btn btn-primary">Update</a></td>
+    <td><a href="/Userrs/Delete/@item.Id" class="btn btn-danger">Delete</a></td>
+</tr>}
+    </tbody>
+
+</table>

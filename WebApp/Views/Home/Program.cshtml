@@ -1,0 +1,15 @@
+﻿@model List<Entities.Concrete.Program>
+@{
+    ViewBag.Title = "Program";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Program</h2>
+
+<br />
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <p>@item.Description</p>
+    }
+</div>

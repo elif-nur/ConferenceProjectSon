@@ -1,0 +1,121 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>XIV. INTERNATIONAL CONFERENCE ON NUCLEAR STRUCTURE</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/startbootstrap-shop-item-gh-pages/css/slider.css" rel="stylesheet" />
+    <link href="~/startbootstrap-shop-item-gh-pages/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    
+
+</head>
+
+<body>
+
+    @Html.Partial("Slider")
+
+    <!-- Page Content -->
+    <div class="container">
+
+
+        <!-- /.col-lg-9 -->
+
+
+        <div class="row">
+            <div class="col-lg-3">
+                <br />
+                @*<h6 class="my-4" style="text-align:center">2-4 June 2021</h6>*@
+                <div class="list-group">
+                    <a href="/Home/Index" class="list-group-item">Welcome</a>
+                    <a href="/Home/Mision_Vision" class="list-group-item">Mision / Vision</a>
+                    <a href="/Home/Commite" class="list-group-item">Commite</a>
+                    <a href="/Home/Program" class="list-group-item">Program</a>
+                    <a href="/Home/Topics" class="list-group-item">Topics</a>
+                    <a href="/Home/Invited_Speakers" class="list-group-item"> Invited Speakers</a>
+
+                    @*@Html.Partial("Contact")*@
+
+                    <div class="card" style="width: 100%;">
+                        <div class="card-body">
+                            <h6 class="card-title">Contact</h6>
+                            <i class="fas fa-envelope">  <a href="mailto:nihal@selcuk.edu.tr">nihal@selcuk.edu.tr</a></i>
+                            <i class="fas fa-envelope">  <a href="mailto:nsp2021@selcuk.edu.tr">nsp2021@selcuk.edu.tr</a></i>
+
+
+                        </div>
+                    </div>
+                    <a href="/Home/Registration" class="list-group-item" target="_blank">Registration</a>
+                    <a href="/Login/Manager_Login" class="list-group-item" target="_blank">Manager Login</a>
+
+                </div>
+            </div>
+            <!-- /.col-lg-3 -->
+            <div class="col-lg-9">
+                @RenderBody()
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-9">
+
+                <img src="~/Images/unnamed.png" style="width:170px; height:150px" />
+                <img src="~/Images/NuPECC_Logo_Big.jpg" style="width:150px; height:120px" />
+            </div>
+        </div>
+
+        <br /><br />
+        @Html.Partial("Footer")
+        @*<div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-9">
+
+                    <i class="fas fa-clock">
+                        Starts 2 Sep 2019, 09:00<br />
+                        Ends 6 Sep 2019, 18:00
+                    </i>
+                    <br />
+                    <br />
+                    <i class="fas fa-map-marker-alt">Selçuk Üniversitesi, Alaeddin Keykubat Yerleşkesi, Akademi Mah. Yeni İstanbul Cad. No:369 Posta Kodu:42130 Selçuklu-Konya / TÜRKİYE</i>
+                </div>
+            </div>*@
+
+    </div>
+    <!-- /.container -->
+    <!-- Footer -->
+    <footer class="py-5 bg-white ">
+    <div class="row">
+
+        <div class="col-lg-3"></div>
+        <div class="col-lg-9">
+    <p class="m-0 text-center text-black-50">Copyright &copy; Your Website 2020</p>
+    </div>
+    </div>
+   
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/startbootstrap-shop-item-gh-pages/vendor/bootstrap/js/slider.js"></script>
+    <script src="~/startbootstrap-shop-item-gh-pages/vendor/jquery/jquery.min.js"></script>
+    <script src="~/startbootstrap-shop-item-gh-pages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/startbootstrap-shop-item-gh-pages/vendor/jquery/jquery.min.js"></script>
+    <script src="~/startbootstrap-shop-item-gh-pages/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+
+</body>
+
+</html>
+

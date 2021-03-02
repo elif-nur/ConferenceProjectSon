@@ -1,0 +1,28 @@
+﻿@model List<Entities.Concrete.Topic>
+@{
+    ViewBag.Title = "Topics";
+}
+
+<br />
+<h4 style="color:firebrick">Topics</h4>
+<hr />
+<p>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>@item.Description</li>
+        }
+        @*<li>Nuclear Structure</li>
+        <li>Nuclear Scattering</li>
+        <li>Nuclear Analytical Methods</li>
+        <li>High Energy and Particle Physics</li>
+        <li>Nuclear Astrophysics</li>
+        <li>Nuclear Models</li>
+        <li>Medical and Health Physics</li>
+        <li>Radiation Measurements and Dosimeters</li>
+        <li>Nuclear Application in Life Science</li>
+        <li>Accelerator Physics</li>
+        <li>Other Related Topics</li>*@
+       
+    </ul>
+</p>

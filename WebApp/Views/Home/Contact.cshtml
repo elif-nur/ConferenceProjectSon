@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Entities.Concrete.Contact>
+<div class="card" style="width: 100%;">
+    <div class="card-body">
+        <h6 class="card-title">Contact</h6>
+        @foreach (var item in Model)
+        {
+            <i class="fas fa-envelope">  <a href="mailto:@item.Email">@item.Email</a></i>
+        }
+
+        @*<i class="fas fa-envelope">  <a href="mailto:nihal@selcuk.edu.tr">nihal@selcuk.edu.tr</a></i>
+        <i class="fas fa-envelope">  <a href="mailto:nsp2021@selcuk.edu.tr">nsp2021@selcuk.edu.tr</a></i>*@
+
+
+    </div>
+</div>
