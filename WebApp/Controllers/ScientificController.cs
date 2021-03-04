@@ -25,8 +25,13 @@ namespace WebApp.Controllers
         [HttpPost]
         public ActionResult Create(Scientific scientific)
         {
-            scientificManager.Add(scientific);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                scientificManager.Add(scientific);
+                return RedirectToAction("Index");
+            }
+            return View();
+           
         }
         public ActionResult Bring(Scientific scientific)
         {

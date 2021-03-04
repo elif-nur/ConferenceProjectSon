@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Entities.Concrete.Registration>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/ManagerPanel/_Layout.cshtml";
+}
+
+<br /><br />
+
+      <table class="table" id="tablo">
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>FIRSTNAME</th>
+                  <th>LASTNAME</th>
+                  <th>EMAIL</th>
+                  <th>AFFILIATION</th>
+                  <th>COUNTRY</th>
+                  <th>TITLE</th>
+                  <th>ABSTRACT</th>
+                  <th>PARTICIPAINT</th>
+                  <th>DELETE</th>
+              </tr>
+          </thead>
+          <tbody>
+              @foreach (var item in Model)
+              {
+      <tr>
+          <td>@item.Id</td>
+          <td>@item.FirstName</td>
+          <td>@item.LastName</td>
+          <td>@item.Email</td>
+          <td>@item.Affiliation</td>
+          <td>@item.Country</td>
+          <td>@item.Title</td>
+          <td>@item.Abstract</td>
+          <td>@item.Selection</td>
+          <td><a href="/Registrationn/Delete/@item.Id" class="btn btn-danger">Delete</a></td>
+      </tr>}
+          </tbody>
+
+      </table>

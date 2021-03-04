@@ -1,4 +1,4 @@
-﻿
+﻿@model Entities.Concrete.Registration
 @{
     Layout = null;
 }
@@ -41,47 +41,55 @@
     <div class="container-contact100">
 
         <div class="wrap-contact100">
-            <form class="contact100-form validate-form">
+           
+            <form class="contact100-form validate-form" action="Registration" method="post">
                 <span class="contact100-form-title">
                     Registration Form
                 </span>
 
-                <div class="wrap-input100 validate-input" data-validate="Please enter your first name">
-                    <input class="input100" type="text" name="firstname" placeholder="First Name">
+                <div class="wrap-input100 validate-input">
+                    <input class="input100" type="text" name="FirstName" placeholder="First Name" required>
                     <span class="focus-input100"></span>
                 </div>
-                <div class="wrap-input100 validate-input" data-validate="Please enter your last name">
-                    <input class="input100" type="text" name="lastname" placeholder="Last Name">
+                <div class="wrap-input100 validate-input">
+                    <input class="input100" type="text" name="LastName" placeholder="Last Name" required>
                     <span class="focus-input100"></span>
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Please enter your email: e@a.x">
-                    <input class="input100" type="text" name="email" placeholder="E-mail">
+                    <input class="input100" type="text" name="Email" placeholder="E-mail" >
                     <span class="focus-input100"></span>
                 </div>
-                <div class="wrap-input100 validate-input" data-validate="Please enter your affiliation">
-                    <input class="input100" type="text" name="affiliation" placeholder="Affiliation">
+                <div class="wrap-input100 validate-input">
+                    <input class="input100" type="text" name="Affiliation" placeholder="Affiliation" required>
                     <span class="focus-input100"></span>
                 </div>
-                <div class="wrap-input100 validate-input" data-validate="Please enter your country">
-                    <input class="input100" type="text" name="country" placeholder="Country">
+                <div class="wrap-input100 validate-input">
+                    <input class="input100" type="text" name="Country" placeholder="Country" required>
                     <span class="focus-input100"></span>
                 </div>
                 <div class="wrap-input100 ">
-                    <input class="input100" type="text" name="title" placeholder="Title">
+                    <input class="input100" type="text" name="Title" placeholder="Title">
                     <span class="focus-input100"></span>
                 </div>
 
-                <input type="radio" id="katilimcidi" onclick="ShowOrHide(1)" name="vehicle">
-                <label for="vehicle1"> Katılımcı Dinleyici</label>
-                <input type="radio" id="vehicle2" name="vehicle" onclick="ShowOrHide(2)">
-                <label for="vehicle2"> Konuşmacı</label>
-                <input type="radio" id="vehicle3" name="vehicle" onclick="ShowOrHide(2)">
-                <label for="vehicle2"> Katılımcı Konuşmacı</label>
+                <div class="wrap-input100 validate-input">
+                    <input type="radio" id="katilimcidi" onclick="ShowOrHide(1)" name="Selection" value="dinleyici" class="input10" required>
+                    <label for="vehicle1">Participant Listener</label>
+                    <span class="focus-input100"></span>
+                    <input type="radio" id="vehicle2" name="Selection" onclick="ShowOrHide(2)" value="konusmacı" class="input10">
+                    <label for="vehicle2"> Speaker</label>
+                    <span class="focus-input100"></span>
+                    <input type="radio" id="vehicle3" name="Selection" onclick="ShowOrHide(2)" value="katılımcı konusmacı" class="input10">
+                    <label for="vehicle2">Invited Speaker</label>
+                    <span class="focus-input100"></span>
+                </div>
                 <br />
                 <div class="wrap-input100" id="abstract">
-                    <textarea class="input100" name="abstract" placeholder="Abstract"></textarea>
+                    @*<h6>Do not exceed 1000 characters</h6>*@
+                    <textarea class="input100" name="Abstract" placeholder="Abstract"></textarea>
                     <span class="focus-input100"></span>
+                   
                 </div>
 
 
@@ -94,6 +102,7 @@
                     </button>
                 </div>
             </form>
+            
         </div>
     </div>
 

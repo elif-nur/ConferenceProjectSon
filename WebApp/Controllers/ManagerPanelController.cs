@@ -25,8 +25,13 @@ namespace WebApp.Controllers
         [HttpPost]
         public ActionResult Create(Topic topic)
         {
-            topicManager.Add(topic);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                topicManager.Add(topic);
+                return RedirectToAction("Index");
+            }
+            return View();
+           
         }
 
         public ActionResult Delete(Topic topic)

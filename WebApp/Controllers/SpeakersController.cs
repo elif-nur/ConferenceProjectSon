@@ -25,8 +25,13 @@ namespace WebApp.Controllers
         [HttpPost]
         public ActionResult Create(InvitedSpeaker invitedSpeaker)
         {
-            invitedSpeakerManager.Add(invitedSpeaker);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                invitedSpeakerManager.Add(invitedSpeaker);
+                return RedirectToAction("Index");
+            }
+            return View();
+           
         }
         public ActionResult Bring(InvitedSpeaker invitedSpeaker)
         {

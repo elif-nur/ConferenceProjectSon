@@ -1,0 +1,13 @@
+﻿@model List<Entities.Concrete.Sponsor>
+<div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-9">
+        @foreach (var item in Model)
+        {
+            <img src=@item.ImagePath />
+            
+        }
+        @*<img src="~/Images/unnamed.png" style="width:170px; height:150px" />
+        <img src="~/Images/NuPECC_Logo_Big.jpg" style="width:150px; height:120px" />*@
+    </div>
+</div>

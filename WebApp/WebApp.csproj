@@ -128,15 +128,16 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ContacttController.cs" />
     <Compile Include="Controllers\FirsttController.cs" />
-    <Compile Include="Controllers\FooterrController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ManagerPanelController.cs" />
     <Compile Include="Controllers\MisionVisionController.cs" />
     <Compile Include="Controllers\OrganisingController.cs" />
     <Compile Include="Controllers\ProgramController.cs" />
+    <Compile Include="Controllers\RegistrationnController.cs" />
     <Compile Include="Controllers\ScientificController.cs" />
     <Compile Include="Controllers\SpeakersController.cs" />
+    <Compile Include="Controllers\SponsorrController.cs" />
     <Compile Include="Controllers\UserrsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -486,7 +487,6 @@
     <Content Include="Views\ManagerPanel\_Layout.cshtml" />
     <Content Include="Views\ManagerPanel\Index.cshtml" />
     <Content Include="Views\Home\Slider.cshtml" />
-    <Content Include="Views\Home\Footer.cshtml" />
     <Content Include="Views\ManagerPanel\Create.cshtml" />
     <Content Include="Views\ManagerPanel\Bring.cshtml" />
     <Content Include="Views\Speakers\Index.cshtml" />
@@ -508,9 +508,6 @@
     <Content Include="Views\Firstt\Index.cshtml" />
     <Content Include="Views\Firstt\Create.cshtml" />
     <Content Include="Views\Firstt\Bring.cshtml" />
-    <Content Include="Views\Footerr\Index.cshtml" />
-    <Content Include="Views\Footerr\Create.cshtml" />
-    <Content Include="Views\Footerr\Bring.cshtml" />
     <Content Include="Views\Contactt\Index.cshtml" />
     <Content Include="Views\Contactt\Create.cshtml" />
     <Content Include="Views\Contactt\Bring.cshtml" />
@@ -518,6 +515,11 @@
     <Content Include="Views\Userrs\Index.cshtml" />
     <Content Include="Views\Userrs\Create.cshtml" />
     <Content Include="Views\Userrs\Bring.cshtml" />
+    <Content Include="Views\Home\Participants.cshtml" />
+    <Content Include="Views\Registrationn\Index.cshtml" />
+    <Content Include="Views\Home\Sponsor.cshtml" />
+    <Content Include="Views\Sponsorr\Index.cshtml" />
+    <Content Include="Views\Sponsorr\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

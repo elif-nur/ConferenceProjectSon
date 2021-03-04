@@ -44,6 +44,7 @@
                     <a href="/Home/Program" class="list-group-item">Program</a>
                     <a href="/Home/Topics" class="list-group-item">Topics</a>
                     <a href="/Home/Invited_Speakers" class="list-group-item"> Invited Speakers</a>
+                    <a href="/Home/Participants" class="list-group-item"> Participants</a>
 
                     @*@Html.Partial("Contact")*@
 
@@ -66,31 +67,32 @@
                 @RenderBody()
             </div>
         </div>
-
-        <div class="row">
+       @*@Html.Partial("Sponsor")*@
+        @{ Html.RenderAction("Sponsor", "Home"); }
+        @*<div class="row">
             <div class="col-lg-3"></div>
             <div class="col-lg-9">
 
                 <img src="~/Images/unnamed.png" style="width:170px; height:150px" />
                 <img src="~/Images/NuPECC_Logo_Big.jpg" style="width:150px; height:120px" />
             </div>
-        </div>
+        </div>*@
 
         <br /><br />
-        @Html.Partial("Footer")
-        @*<div class="row">
-                <div class="col-lg-3"></div>
-                <div class="col-lg-9">
 
-                    <i class="fas fa-clock">
-                        Starts 2 Sep 2019, 09:00<br />
-                        Ends 6 Sep 2019, 18:00
-                    </i>
-                    <br />
-                    <br />
-                    <i class="fas fa-map-marker-alt">Selçuk Üniversitesi, Alaeddin Keykubat Yerleşkesi, Akademi Mah. Yeni İstanbul Cad. No:369 Posta Kodu:42130 Selçuklu-Konya / TÜRKİYE</i>
-                </div>
-            </div>*@
+        @*<div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-9">
+
+                <i class="fas fa-clock">
+                    Starts 2 Sep 2019, 09:00<br />
+                    Ends 6 Sep 2019, 18:00
+                </i>
+                <br />
+                <br />
+                <i class="fas fa-map-marker-alt">Selçuk Üniversitesi, Alaeddin Keykubat Yerleşkesi, Akademi Mah. Yeni İstanbul Cad. No:369 Posta Kodu:42130 Selçuklu-Konya / TÜRKİYE</i>
+            </div>
+        </div>*@
 
     </div>
     <!-- /.container -->

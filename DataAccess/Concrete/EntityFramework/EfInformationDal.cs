@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfFooterDal : IFooterDal
+    public class EfInformationDal : IInformationDal
     {
-        public void Add(Footer entity)
+        public void Add(Information entity)
         {
             using (NspDbContext context = new NspDbContext())
             {
@@ -22,7 +22,7 @@ namespace DataAccess.Concrete.EntityFramework
             }
         }
 
-        public void Delete(Footer entity)
+        public void Delete(Information entity)
         {
             using (NspDbContext context = new NspDbContext())
             {
@@ -32,23 +32,23 @@ namespace DataAccess.Concrete.EntityFramework
             }
         }
 
-        public Footer Get(Expression<Func<Footer, bool>> filter)
+        public Information Get(Expression<Func<Information, bool>> filter)
         {
             using (NspDbContext context = new NspDbContext())
             {
-                return context.Set<Footer>().FirstOrDefault(filter);
+                return context.Set<Information>().FirstOrDefault(filter);
             }
         }
 
-        public List<Footer> GetAll(Expression<Func<Footer, bool>> filter = null)
+        public List<Information> GetAll(Expression<Func<Information, bool>> filter = null)
         {
             using (NspDbContext context = new NspDbContext())
             {
-                return filter == null ? context.Set<Footer>().ToList() : context.Set<Footer>().Where(filter).ToList();
+                return filter == null ? context.Set<Information>().ToList() : context.Set<Information>().Where(filter).ToList();
             }
         }
 
-        public void Update(Footer entity)
+        public void Update(Information entity)
         {
             using (NspDbContext context = new NspDbContext())
             {

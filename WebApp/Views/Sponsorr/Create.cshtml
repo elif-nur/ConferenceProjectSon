@@ -1,0 +1,12 @@
+﻿@model Entities.Concrete.Sponsor
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/ManagerPanel/_Layout.cshtml";
+}
+<br />
+@using(Html.BeginForm("Create","Sponsorr",FormMethod.Post,new { enctype = "multipart/form-data" }))
+{
+    <input type="file" name="ImagePath" /><br />
+    <input type="submit" value="Kaydet" class="btn btn-warning" />
+}
+

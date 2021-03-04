@@ -25,8 +25,13 @@ namespace WebApp.Controllers
         [HttpPost]
         public ActionResult Create(OrganisingSpeaker organisingSpeaker)
         {
-            organisingManager.Add(organisingSpeaker);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                organisingManager.Add(organisingSpeaker);
+                return RedirectToAction("Index");
+            }
+            return View();
+           
         }
         public ActionResult Bring(OrganisingSpeaker organisingSpeaker)
         {

@@ -18,8 +18,10 @@ namespace WebApp.Controllers
         ProgramManager programManager = new ProgramManager(new EfProgramDal());
         MisionVisionManager misionVisionManager = new MisionVisionManager(new EfMisionVisionDal());
         FirstPageManager firstPageManager = new FirstPageManager(new EfFirstPageDal());
-        FooterManager footerManager = new FooterManager(new EfFooterDal());
         ContactManager contactManager = new ContactManager(new EfContactDal());
+        RegistrationManager registrationManager = new RegistrationManager(new EfRegistrationDal());
+        InformationManager informationManager = new InformationManager(new EfInformationDal());
+        SponsorManager sponsorManager = new SponsorManager(new EfSponsorDal());
         public ActionResult Index()
         {
             List<FirstPage> model = firstPageManager.GetAll();
@@ -52,25 +54,42 @@ namespace WebApp.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult Registration(Registration registration)
+        {
+            if (ModelState.IsValid)
+            {
+                registrationManager.Add(registration);
+                return RedirectToAction("Participants","Home");
+            }
+            return View();
+               
+        }
+        public ActionResult Participants()
+        {
+            List<Registration> model = registrationManager.GetAll();
+            return View(model);
+        }
         public PartialViewResult Slider()
         {
             return PartialView();
         }
-        public PartialViewResult Footer() 
-        { 
-            return PartialView();
-        }
+     
         public PartialViewResult Contact()
         {
-            List<Contact> model = contactManager.GetAll();
-            return PartialView(model);
+
+            return PartialView();
         }
         public ActionResult Program()
         {
             List<Program> model = programManager.GetAll();
             return View(model);
         }
-       
+       public ActionResult Sponsor()
+        {
+            List<Sponsor> model = sponsorManager.GetAll();
+            return View(model);
+        }
      
 
     }

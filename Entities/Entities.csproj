@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,7 +45,7 @@
     <Compile Include="Abstract\IEntity.cs" />
     <Compile Include="Concrete\Contact.cs" />
     <Compile Include="Concrete\FirstPage.cs" />
-    <Compile Include="Concrete\Footer.cs" />
+    <Compile Include="Concrete\Information.cs" />
     <Compile Include="Concrete\InvitedSpeaker.cs" />
     <Compile Include="Concrete\MisionVision.cs" />
     <Compile Include="Concrete\OrganisingSpeaker.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="Concrete\Registration.cs" />
     <Compile Include="Concrete\Scientific.cs" />
     <Compile Include="Concrete\Slider.cs" />
+    <Compile Include="Concrete\Sponsor.cs" />
     <Compile Include="Concrete\Topic.cs" />
     <Compile Include="Concrete\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

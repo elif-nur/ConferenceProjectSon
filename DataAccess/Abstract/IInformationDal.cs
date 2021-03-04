@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-    public interface IFooterDal:IEntityRepository<Footer>
+    public interface IInformationDal:IEntityRepository<Information>
     {
     }
 }

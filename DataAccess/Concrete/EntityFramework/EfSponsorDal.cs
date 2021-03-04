@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfUserDal : IUserDal
+    public class EfSponsorDal : ISponsorDal
     {
-        public void Add(User entity)
+        public void Add(Sponsor entity)
         {
             using (NspDbContext context = new NspDbContext())
             {
@@ -22,7 +22,7 @@ namespace DataAccess.Concrete.EntityFramework
             }
         }
 
-        public void Delete(User entity)
+        public void Delete(Sponsor entity)
         {
             using (NspDbContext context = new NspDbContext())
             {
@@ -30,35 +30,26 @@ namespace DataAccess.Concrete.EntityFramework
                 deleted.State = EntityState.Deleted;
                 context.SaveChanges();
             }
+           
         }
 
-        public User Get(Expression<Func<User, bool>> filter)
+        public Sponsor Get(Expression<Func<Sponsor, bool>> filter)
         {
             using (NspDbContext context = new NspDbContext())
             {
-                return context.Set<User>().FirstOrDefault(filter);
-                
+                return context.Set<Sponsor>().FirstOrDefault(filter);
             }
         }
 
-        public List<User> GetAll(Expression<Func<User, bool>> filter = null)
+        public List<Sponsor> GetAll(Expression<Func<Sponsor, bool>> filter = null)
         {
             using (NspDbContext context = new NspDbContext())
             {
-                return filter == null ? context.Set<User>().ToList() : context.Set<User>().Where(filter).ToList();
+                return filter == null ? context.Set<Sponsor>().ToList() : context.Set<Sponsor>().Where(filter).ToList();
             }
         }
 
-        public User Login(string username,string password)
-        {
-            using (NspDbContext context = new NspDbContext())
-            {
-                return context.Set<User>().FirstOrDefault(x=>x.UserName==username && x.Password==password);
-                
-            }
-        }
-
-        public void Update(User entity)
+        public void Update(Sponsor entity)
         {
             using (NspDbContext context = new NspDbContext())
             {
